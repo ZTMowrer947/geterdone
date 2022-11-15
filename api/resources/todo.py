@@ -5,7 +5,19 @@ class TodoList(Resource):
     def get(self):
         return []
 
+    def post(self):
+        raise NotImplementedError
+
 
 class Todo(Resource):
-    def get(self, id: int):
-        return {id: id}
+    def get(self, todo_id: int):
+        return {'id': todo_id}
+
+    def put(self, todo_id: int):
+        raise NotImplementedError
+
+    def patch(self, todo_id: int):
+        raise NotImplementedError
+
+    def delete(self, todo_id: int):
+        raise NotImplementedError
